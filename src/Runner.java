@@ -6,7 +6,7 @@ public class Runner {
         Address yes = new Address("1313 Mockingbird Lane Apt 6A, Springfield, MO 65123");
         System.out.println(yes);
         Scanner scan = new Scanner(System.in);
-        String input = "";
+        String input = "";//
         while (!(input.equals("4")))
         {
             System.out.println("What would you like to do?\n1. Calculate cost of one package\n2. Simulate package\n3. How package costs are calculated\n4. Exit\nInput:");
