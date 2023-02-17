@@ -48,7 +48,7 @@ public class PostageCalculator {
         {
             total = total + (pakage.getWeight()-40)/10*0.1;
         }
-        return total;
+        return total;//e
     }
 
 
