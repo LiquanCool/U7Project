@@ -6,6 +6,15 @@ public class Package {
     private double height;
     private double width;
 
+    public Package(Address origin, Address destination, double weight, double length, double height, double width)
+    {
+        this.origin = origin;
+        this.destination = destination;
+        this.weight = weight;
+        this.length = length;
+        this.height = height;
+        this.width = width;
+    }
     public Address getOrigin() {
         return origin;
     }
