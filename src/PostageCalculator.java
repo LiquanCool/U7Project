@@ -14,6 +14,7 @@ public class PostageCalculator {
         {
             total = total + (weight-40)/10*0.1;
         }
+        total = (double)((int)(total*100))/100;
         return total;
     }
     public static double calculatePostageWithAddress(Address originAddress, Address destinationAddress, double weight, double length, double width, double height)
@@ -31,6 +32,7 @@ public class PostageCalculator {
         {
             total = total + (weight-40)/10*0.1;
         }
+        total = (double)((int)(total*100))/100;
         return total;
     }
     public static double calculatePostageWithPackage(Package pakage)
@@ -48,6 +50,7 @@ public class PostageCalculator {
         {
             total = total + (pakage.getWeight()-40)/10*0.1;
         }
+        total = (double)((int)(total*100))/100;
         return total;
     }
 

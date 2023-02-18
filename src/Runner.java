@@ -8,8 +8,10 @@ public class Runner {
         String input = "";
         while (!(input.equals("4")))
         {
+            System.out.println("__________________________________________________");
             System.out.println("What would you like to do?\n1. Calculate cost of one package\n2. Simulate package\n3. How package costs are calculated\n4. Exit\nInput:");
             input = scan.nextLine();
+            System.out.println("__________________________________________________");
             if (input.equals("1"))
             {
                 boolean acceptable = false;
@@ -40,11 +42,21 @@ public class Runner {
             }
             else if (input.equals("2"))
             {
+                System.out.print("How many packages would you like to simulate? ");
+                input = scan.nextLine();
+                PackageSimulator sim = new PackageSimulator();
+                sim.generatePackages(Integer.parseInt(input));
+                System.out.println(sim.getSimulationInfo());
+                System.out.println("__________________________________________________");
+                System.out.println("Total Cost of all packages: " + sim.getTotalCost());
 
             }
             else if (input.equals("3"))
             {
-
+                System.out.print("The base cost of a package is $3.75" +
+                        "\nFor each difference in the country codes of the origin and destination, 1 cent will be added (The county code is the first 3 digits of the zip code)" +
+                        "\n\nPackages over 36 inches in combined dimensions will cost 10 more cents per inch" +
+                        "\nPackages over 40 pounds will cost an additional 10 cents per tenth of a pound for pounds over the 40 pound limit\n");
             }
             else if (input.equals("4"))
             {
